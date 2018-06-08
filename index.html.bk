@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+          $("#loading").hide();
+          insertChat("remote","how can i help you");
+      });
+</script>
+</head>
+    <body>
+        <div><img src="img.PNG" style="width: 100%"></div>
+<div class="col-md-12"  >
+
+<div class="col-md-1"  ></div>
+<div class="col-md-10"  >
+<div class="w3-content w3-section">
+  <img class="mySlides" src="mod1.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod2.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod3.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod4.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod5.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod6.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod7.PNG" style="width: 100%; height: 95vh;">
+  <img class="mySlides" src="mod8.PNG" style="width: 100%; height: 95vh;">
+</div>
+</div>
+<div class="col-md-1"  ></div>
+</div>
+<div id="chat-icon">
+  <button><img src="chat_icon.png" style="width:200px;height:120px" id="chat-icon" align="right"></button>
+</div>
+<div class="frame">
+          <div class="panel" style="background-color:#009fda">
+            <div id="chat-panel" style="height:50px;background-color:#009fda;border:0">
+              <table style="margin: 0px auto;">
+                <tr>
+                  <td>
+                    <img src="https://github.com/venkatsantosh/TM_UI/blob/master/chatbot_tm.JPG?raw=true" style="width:35px;height:50px" align="left">
+                  </td>
+                  <td><p style="color: #009fda">--</p></td>
+                  <td align="center">
+                    <b style="color: white">We are here to help you 24x7</b>
+                    <br><small style="color: white">Please chat with us</small>
+                  </td>
+                  <td><p style="color: #009fda">-----</p></td>
+                  <td id="minimize_button">
+                    <button style="background-color: #009fda;border:0">
+                      <img src="minimize.png" style="width: 18px;height:4px" align="right">
+                    </button>
+                  </td>
+                  <td><p style="color: #009fda">---</p></td>
+                  <td id="reload_button">
+                    <button style="background-color: #009fda;border:0">
+                      <img src="reload.png" style="width: 18px;height: 18px" align="right">
+                    </button></td>
+                  <td><p style="color: #009fda">---</p></td>
+                  <!-- <td id="expand_button">
+                    <button id="collapse" style="background-color: #337ab7;border:0">
+                      <img src="expand.png" style="width: 18px;height:18px" align="right">
+                    </button>
+                  </td>
+                  <td><p style="color: #337ab7"></p></td>                  -->
+                  <td id="close_button">
+                    <button style="background-color:#009fda;border:0">
+                      <img src="close.png" style="width: 15px;height: 15px" align="left">
+                    </button>
+                  </td>
+                </tr>
+                </table>
+              </div>
+            </div>
+          <div class="innerframe">
+            <img src="loading.gif" style="width:100%;height:60%" align="center" id="loading">
+            <ul id="messages"></ul>
+            <div id="message-box" style="width: 95%">
+                <div class="msj-rta macro" style="margin:auto;width: 100%">
+                    <div class="text text-r" style="background:white;width: 100%">
+                        <input class="mytext" id="mytext" placeholder="Type a message"/>
+                        <label class="placeHolder" align="right">Press enter to send</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="chatContainer">
+        <div>
+          <img src="bottom.PNG" style="width: 100%"></div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="app.js"></script>
+	<script>
+var myIndex = 0;
+carousel();
+var e = jQuery.Event("keydown", {keyCode: 13});
+
+    // $('.mytext').append("sdg");
+    document.getElementById("mytext").value = "Johnny Bravo";
+     document.getElementById("mytext").trigger(e);
+// jQuery("button").on("click", '#yes1',function() {
+//           var msgText = $(this)[0].getAttribute('value');
+//           console.log(msgText);
+//
+//           $('.mytext').append(msgText);
+//           $('.mytext').trigger(e);
+//
+// });
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 7000); // Change image every 2 seconds
+}
+</script>
+</html>
