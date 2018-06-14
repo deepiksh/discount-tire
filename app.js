@@ -5,7 +5,7 @@ var remote = {};
 remote.avatar = "discount logo.png"//"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Logo_of_the_Telekom_Malaysia.svg/660px-Logo_of_the_Telekom_Malaysia.svg.png";
 
 
-var accessToken = "528e3031f7f342f28d9f4a0a20eb7abc";
+var accessToken = "a15bc23594844fdab87ff23e0837efff";//528e3031f7f342f28d9f4a0a20eb7abc";
 var baseUrl = "https://api.api.ai/v1/";
 
 function formatTime(date) {
